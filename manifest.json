@@ -1,0 +1,9 @@
+{
+    "name": "com.senyss.ymda",
+    "description": "Native host application for connection Ymusick & Discord activity",
+    "path": "C:\\Users\\OwO\\Desktop\\YandexMusicDiscordActivity\\NM.bat",
+    "type": "stdio",
+    "allowed_origins": [
+      "chrome-extension://pdaepcjnbgfeapdjpnbgfoofamkiacfp/"
+    ]
+  }

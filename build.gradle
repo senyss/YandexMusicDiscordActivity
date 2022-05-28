@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    implementation 'org.json:json:20211205'
+    implementation 'club.minnced:java-discord-rpc:2.0.2'
+    implementation 'org.jsoup:jsoup:1.14.3'
+    implementation 'org.apache.httpcomponents.client5:httpclient5:5.1.3'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.senyss.YMDA.App'
+        )
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+task run(type: JavaExec) {
+    group = 'Run'
+    description = ''
+
+    classpath sourceSets.main.runtimeClasspath
+    main = "com.senyss.YMDA.App"
+    args ""
+}

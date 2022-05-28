@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+  
+    "name": "YMDA",
+    "description": "This extension will will translate your current song from Ymusic to your discord activity",
+    "version": "0.1",
+  
+    "background": {
+        "scripts": [ "background.js" ]
+    },
+
+    "content_scripts": [
+        {
+          "matches": [
+            "https://radio.yandex.ru/*",
+            "https://music.yandex.ru/*"
+          ],
+          "js": ["content-script.js"]
+        }
+      ],
+
+    "permissions": [
+     "activeTab",
+     "nativeMessaging",
+     "tabs",
+     "https://radio.yandex.ru/*",
+     "https://music.yandex.ru/*"
+     ]
+  }
